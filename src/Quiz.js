@@ -14,10 +14,11 @@ class Quiz extends Component {
     
        if (isQuizEnd) {
            return (
-            <QuizQuestion quiz_question={quizData.quiz_questions[this.state.quiz_position -1]}/>
+            <QuizEnd/> 
            )} else 
            return (
-            <QuizEnd/> 
+            <QuizQuestion quiz_question={quizData.quiz_questions[this.state.quiz_position -1]}/>
+       
            )           
    } 
 }
