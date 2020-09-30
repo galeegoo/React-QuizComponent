@@ -10,12 +10,15 @@ class Quiz extends Component {
         this.state = {quiz_position: 1 }
     }
    render() {
-    return ( 
-        <div>
-            <QuizEnd/>
+       const isQuizEnd = true
+    
+       if (isQuizEnd) {
+           return (
             <QuizQuestion quiz_question={quizData.quiz_questions[this.state.quiz_position -1]}/>
-        </div>
-    )
+           )} else 
+           return (
+            <QuizEnd/> 
+           )           
    } 
 }
 export default Quiz;
